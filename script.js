@@ -14,7 +14,7 @@ if (p === ''){
 if (n === ''){
   displayAtivo(0);
   erro.classList.toggle('erroAtivo');
-  return erro.innerHTML = 'Campo Obrigatorio';
+  return erro.innerHTML = 'Campo nome Obrigatorio';
 }
 console.log(sB);
 if (sB === '' || isNaN(sB)){
