@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section class="section-ativo section">
+  <div class="calculadora">
+    <div class="titulo">
+      <h1>calculadora</h1>
+      <h2>PJ x CLT</h2>
+    </div>
+    <dir class="conteudo">
+      <h3>responda perguntas simples para descobri qual o melhor para você</h3>
+      <label for="opt">Com o que você trabalha?</label>
+      <p class="erro"></p>
+      <input class="profissao" id="opt" list="browsers">
+      <datalist id="browsers">
+        <option value="Desenvolvedor">
+        <option value="Design">
+        <option value="Artista">
+      </datalist>
+      <button class="but_name">Continuar</button>
+    </dir>
+  </div>
+  <div class="carrossel">
+    <img src="imgs/contadorDireto-1.png" alt="imagen-auxiliar">
+  </div>
+
+</section>
+
+<section class="section">
+  <div class="calculadora">
+    <div class="titulo">
+      <h1>calculadora</h1>
+      <h2>PJ x CLT</h2>
+    </div>
+    <div class="conteudo">
+      <label for="opt-name">Qual seu nome?</label>
+      <p class="erro"></p>
+      <input type="text" class="name" id="opt-name">
+      <button class="but_name">Continuar</button>
+    </div>
+  </div>
+  <div class="carrossel">
+    <img src="imgs/conteConosco.png" alt="imagen-auxiliar">
+  </div>
+</section>
+
+<section class="section">
+  <div class="calculadora">
+    <div class="titulo">
+      <h1>calculadora</h1>
+      <h2>PJ x CLT</h2>
+    </div>
+    <div class="conteudo">
+      <h2 class="confidencial">Confidencial</h2>
+      <p>Todas as informações são confidencias e não serão compatilhadas com ninguém.</p>
+      <label for="opt-name">Qual o seu salário bruto com CLT?</label>
+      <input class="salarioBruto"  id="opt-name" list="salario">
+      <datalist id="salario">
+        <option value="2000">
+        <option value="4000">
+        <option value="6000">
+        <option value="8000">
+      </datalist>
+      <button class="but_name">Continuar</button>
+    </div>
+  </div>
+  <div class="carrossel">
+    <img src="imgs/confidencial.png" alt="imagen-auxiliar">
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="calculadora">
+    <div class="titulo">
+      <h1>calculadora</h1>
+      <h2>PJ x CLT</h2>
+    </div>
+    <div class="conteudo"> 
+      <p>Valor com os descontos já abatidos</p>
+      <label for="opt-name">Qual o seu salário liquido?</label> 
+      <input list="salario" class="salarioLiquido" id="opt-name">
+      <button class="but_name">Continuar</button>
+    </div>
+  </div>
+  <div class="carrossel">
+    <img src="imgs/qualSeuTelefone.png" alt="imagen-auxiliar">
+  </div>
+</section>
+
+<section class="section">
+  <div class="calculadora">
+    <div class="titulo">
+      <h1>calculadora</h1>
+      <h2>PJ x CLT</h2>
+    </div>
+    <div class="conteudo">
+      <label for="opt-name">Qual o seu Telefone?</label>
+      <input type="tel" class="telefone" placeholder="(00) 00000 - 0000" id="opt-name">
+      <button class="but_name">Continuar</button>
+    </div>
+  </div>
+  <div class="carrossel">
+    <img src="imgs/SalarioLiquido.png" alt="imagen-auxiliar">
+  </div>
+</section>
+
+<section class="section">
+  <div class="calculadora">
+    <div class="titulo">
+      <h1>calculadora</h1>
+      <h2>PJ x CLT</h2>
+    </div>
+    <div class="conteudo">
+      <h2>Fica tranquilo</h2>
+      <p>vamos te enviar o comparativo por e-mail</p>
+      <label for="opt-name">Qual o seu E-mail?</label>
+      <input type="email" class="gmail" placeholder="@gmail.com" id="opt-name">
+      <button class="but_name">Ver Comparativo</button>
+    </div>
+  </div>
+  <div class="carrossel">
+    <img src="imgs/ficaTranquilo.png" alt="imagen-auxiliar">
+  </div>
+</section>
+
+<section class="section">
+  <div class="calculadora tabela">
+    <table>
+      <thead class="thead">
+        <tr>
+          <th>CLT(VOCÊ HOJE)</th>
+          <th>PJ</th>
+        </tr>
+      </thead>
+      <tbody class="tbody">
+        <tr>
+          <td class="salarioClt"></td>
+          <td class="salarioPj"></td>
+        </tr>
+        <tr>
+          <td class="descontoClt"></td>
+          <td class="descontoPj"></td>
+        </tr>
+        <tr>
+          <td class="liquidoClt"></td>
+          <td class="liquidoPj"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="carrossel tableC">
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
