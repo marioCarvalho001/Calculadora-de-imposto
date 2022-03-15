@@ -193,12 +193,15 @@ thead th{
     flex-direction: column-reverse;
   }
   .carrossel{
-    width: 100vw;
-    height: 50vh;
+    width: 100%;
+    height: 45vh;
   }
-  .calculadora{
-    max-width: 90vw;
-    height: 50vh;
+  .conteudo{
+    padding-top: 0px;
+    width: 100vw;
+  }
+  button{
+    margin-bottom: 30px;
   }
 }
 @media(max-width: 412px){
