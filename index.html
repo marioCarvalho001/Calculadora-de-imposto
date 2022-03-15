@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
       <h3>responda perguntas simples para descobri qual o melhor para você</h3>
       <label for="opt">Com o que você trabalha?</label>
       <p class="erro"></p>
-      <input class="profissao" id="opt" list="browsers">
+      <input autocomplete="off" class="profissao" id="opt" list="browsers">
       <datalist id="browsers">
         <option value="Desenvolvedor">
         <option value="Design">
@@ -42,7 +42,7 @@
     <div class="conteudo">
       <label for="opt-name">Qual seu nome?</label>
       <p class="erro"></p>
-      <input type="text" class="name" id="opt-name">
+      <input autocomplete="off" type="text" class="name" id="opt-name">
       <button class="but_name">Continuar</button>
     </div>
   </div>
@@ -61,7 +61,7 @@
       <h2 class="confidencial">Confidencial</h2>
       <p>Todas as informações são confidencias e não serão compatilhadas com ninguém.</p>
       <label for="opt-name">Qual o seu salário bruto com CLT?</label>
-      <input class="salarioBruto"  id="opt-name" list="salario">
+      <input autocomplete="off" class="salarioBruto"  id="opt-name" list="salario">
       <datalist id="salario">
         <option value="2000">
         <option value="4000">
@@ -86,7 +86,7 @@
     <div class="conteudo"> 
       <p>Valor com os descontos já abatidos</p>
       <label for="opt-name">Qual o seu salário liquido?</label> 
-      <input list="salario" class="salarioLiquido" id="opt-name">
+      <input autocomplete="off" list="salario" class="salarioLiquido" id="opt-name">
       <button class="but_name">Continuar</button>
     </div>
   </div>
@@ -103,7 +103,7 @@
     </div>
     <div class="conteudo">
       <label for="opt-name">Qual o seu Telefone?</label>
-      <input type="tel" class="telefone" placeholder="(00) 00000 - 0000" id="opt-name">
+      <input autocomplete="off" type="tel" class="telefone" placeholder="(00) 00000 - 0000" id="opt-name">
       <button class="but_name">Continuar</button>
     </div>
   </div>
@@ -122,7 +122,7 @@
       <h2>Fica tranquilo</h2>
       <p>vamos te enviar o comparativo por e-mail</p>
       <label for="opt-name">Qual o seu E-mail?</label>
-      <input type="email" class="gmail" placeholder="@gmail.com" id="opt-name">
+      <input autocomplete="off" type="email" class="gmail" placeholder="@gmail.com" id="opt-name">
       <button class="but_name">Ver Comparativo</button>
     </div>
   </div>
@@ -133,7 +133,7 @@
 
 <section class="section">
   <div class="calculadora tabela">
-    <table>
+    <table class="resultado">
       <thead class="thead">
         <tr>
           <th>CLT(VOCÊ HOJE)</th>
@@ -155,6 +155,78 @@
         </tr>
       </tbody>
     </table>
+
+    <div class="subTables">
+      <table>
+        <thead class="thead">
+          <tr>
+            <th>Calculo do IRRF/Pró-labore</th>
+            <th>Aliquota</th>
+            <th>Deduçao</th>
+          </tr>
+        </thead>
+        <tbody class="tbody">
+          <tr>
+            <td>DE 0,00 ATÉ 1.903,98</td>
+            <td>ISENTO</td>
+            <td>R$ </td>
+          </tr>
+          <tr>
+            <td>DE 1.903,99 ATÉ 2.826,65</td>
+            <td>7,5%</td>
+            <td>R$ 142,80 </td>
+          </tr>
+          <tr>
+            <td>DE 2.826,66 ATÉ 3.751,05</td>
+            <td>15%</td>
+            <td>R$ 354,80</td>
+          </tr>
+          <tr>
+            <td>DE 3.751,06 ATÉ 4.664,68</td>
+            <td>22,5%</td>
+            <td>R$ 636,13</td>
+          </tr>
+          <tr>
+            <td>A PARTIR DE 4.664,69</td>
+            <td>27,5%</td>
+            <td>R$ 869,36</td>
+          </tr>
+          
+        </tbody>
+      </table>
+  
+      <table>
+        <thead class="thead">
+          <tr>
+            <th>Imposto sobre faturamento</th>
+            <th>Aliquota</th>
+          </tr>
+        </thead>
+        <tbody class="tbody">
+          <tr>
+            <td>até 15 mil mensal</td>
+            <td>6%</td>
+          </tr>
+          <tr>
+            <td>até 30 mil mensal</td>
+            <td>11,2%</td>
+          </tr>
+          <tr>
+            <td>até 60 mil mensal</td>
+            <td>14%</td>
+          </tr>
+          <tr>
+            <td>até 150 mil mensal</td>
+            <td>16,0%</td>
+          </tr>
+          <tr>
+            <td>até 300 mil mensal</td>
+            <td>21,0%</td>
+          </tr>     
+        </tbody>
+      </table>
+    </div>
+
   </div>
   <div class="carrossel tableC">
   </div>

@@ -3,10 +3,8 @@ const section = document.querySelectorAll('.section');
 var erro =  document.querySelector('.erro');
 
 function validacao(p,n, sB, sL, t, g){
-  var nu = t;
-  toString(nu);
-  console.log(nu);
   parseInt(sB, sL);
+
 if (p === ''){
   erro.classList.add('erroAtivo');
   return erro.innerHTML = 'Campo Obrigatorio';
@@ -19,25 +17,20 @@ if (n === ''){
 console.log(sB);
 if (sB === '' || isNaN(sB)){
   displayAtivo(1);
-  console.log('salario vazio');
   return false;
 }
 if (sL === '' || isNaN(sL)){
   displayAtivo(2);
-  console.log('salarioLiq vazio');
   return false;
 }
-if (t === '' || isNaN(sL)){
+if (t === '' || isNaN(t) || t < 1000000){
   displayAtivo(3);
-  console.log('telefone vazio');
   return false;
 }
-if (g === ''){
+if (g === '' || g.length < 7){
   displayAtivo(4);
-  console.log('gmail vazio');
   return false;
 }
-
 displayAtivo(5);
 calculoPj(sB, sL);
 }
