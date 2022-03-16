@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,7 +17,7 @@
     </div>
     <div class="conteudo">
       <h3>responda perguntas simples para descobri qual o melhor para você</h3>
-      <span>
+      <span class="inputs">
         <label for="opt">Com o que você trabalha?</label>
         <p class="erro"></p>
         <input autocomplete="off" class="profissao" id="opt" list="browsers">
@@ -29,8 +30,7 @@
       <button class="but_name">Continuar</button>
     </div>
   </div>
-  <div class="carrossel">
-    <img src="imgs/contadorDireto-1.png" alt="imagen-auxiliar">
+  <div class="carrossel carrosselProfissao">
   </div>
 
 </section>
@@ -42,7 +42,7 @@
       <h2>PJ x CLT</h2>
     </div>
     <div class="conteudo">
-      <span>
+      <span class="inputs">
       <label for="opt-name">Qual seu nome?</label>
       <p class="erro"></p>
       <input autocomplete="off" type="text" class="name" id="opt-name">
@@ -50,8 +50,7 @@
       <button class="but_name">Continuar</button>
     </div>
   </div>
-  <div class="carrossel">
-    <img src="imgs/conteConosco.png" alt="imagen-auxiliar">
+  <div class="carrossel carrosselNome">
   </div>
 </section>
 
@@ -64,7 +63,7 @@
     <div class="conteudo">
       <h2 class="confidencial">Confidencial</h2>
       <p>Todas as informações são confidencias e não serão compatilhadas com ninguém.</p>
-      <span>
+      <span class="inputs">
         <label for="opt-name">Qual o seu salário bruto com CLT?</label>
       <input autocomplete="off" class="salarioBruto"  id="opt-name" list="salario">
       <datalist id="salario">
@@ -77,8 +76,7 @@
       <button class="but_name">Continuar</button>
     </div>
   </div>
-  <div class="carrossel">
-    <img src="imgs/confidencial.png" alt="imagen-auxiliar">
+  <div class="carrossel carrosselBruto">
   </div>
 </section>
 
@@ -91,15 +89,14 @@
     </div>
     <div class="conteudo"> 
       <p>Valor com os descontos já abatidos</p>
-      <span>
+      <span class="inputs">
         <label for="opt-name">Qual o seu salário liquido?</label> 
         <input autocomplete="off" list="salario" class="salarioLiquido" id="opt-name">
       </span>
       <button class="but_name">Continuar</button>
     </div>
   </div>
-  <div class="carrossel">
-    <img src="imgs/qualSeuTelefone.png" alt="imagen-auxiliar">
+  <div class="carroselLiquido carrossel">
   </div>
 </section>
 
@@ -110,15 +107,14 @@
       <h2>PJ x CLT</h2>
     </div>
     <div class="conteudo">
-      <span>
+      <span class="inputs">
         <label for="opt-name">Qual o seu Telefone?</label>
         <input autocomplete="off" type="tel" class="telefone" placeholder="(00) 00000 - 0000" id="opt-name">
       </span>
       <button class="but_name">Continuar</button>
     </div>
   </div>
-  <div class="carrossel">
-    <img src="imgs/SalarioLiquido.png" alt="imagen-auxiliar">
+  <div class="carrosselTele">
   </div>
 </section>
 
@@ -131,7 +127,7 @@
     <div class="conteudo">
       <h2>Fica tranquilo</h2>
       <p>vamos te enviar o comparativo por e-mail</p>
-      <span>
+      <span class="inputs">
         <label for="opt-name">Qual o seu E-mail?</label>
       <input autocomplete="off" type="email" class="gmail" placeholder="@gmail.com" id="opt-name">
       </span>
@@ -139,20 +135,20 @@
     </div>
   </div>
   <div class="carrossel">
-    <img src="imgs/ficaTranquilo.png" alt="imagen-auxiliar">
   </div>
 </section>
 
-<section class="section">
-  <div class="calculadora tabela">
-    <table class="resultado">
-      <thead class="thead">
+<section class="section tabela">
+  <div class="tabela-resultado">
+    <table class="striped">
+      <thead>
         <tr>
-          <th>CLT(VOCÊ HOJE)</th>
-          <th>PJ</th>
+            <th>Modelo CLT</th>
+            <th>Modelo PJ</th>
         </tr>
       </thead>
-      <tbody class="tbody">
+
+      <tbody>
         <tr>
           <td class="salarioClt"></td>
           <td class="salarioPj"></td>
@@ -167,92 +163,30 @@
         </tr>
       </tbody>
     </table>
-
-    <div class="subTables">
-      <table>
-        <thead class="thead">
-          <tr>
-            <th>Calculo do IRRF/Pró-labore</th>
-            <th>Aliquota</th>
-            <th>Deduçao</th>
-          </tr>
-        </thead>
-        <tbody class="tbody">
-          <tr>
-            <td>DE 0,00 ATÉ 1.903,98</td>
-            <td>ISENTO</td>
-            <td>R$ </td>
-          </tr>
-          <tr>
-            <td>DE 1.903,99 ATÉ 2.826,65</td>
-            <td>7,5%</td>
-            <td>R$ 142,80 </td>
-          </tr>
-          <tr>
-            <td>DE 2.826,66 ATÉ 3.751,05</td>
-            <td>15%</td>
-            <td>R$ 354,80</td>
-          </tr>
-          <tr>
-            <td>DE 3.751,06 ATÉ 4.664,68</td>
-            <td>22,5%</td>
-            <td>R$ 636,13</td>
-          </tr>
-          <tr>
-            <td>A PARTIR DE 4.664,69</td>
-            <td>27,5%</td>
-            <td>R$ 869,36</td>
-          </tr>
-          
-        </tbody>
-      </table>
-  
-      <table>
-        <thead class="thead">
-          <tr>
-            <th>Imposto sobre faturamento</th>
-            <th>Aliquota</th>
-          </tr>
-        </thead>
-        <tbody class="tbody">
-          <tr>
-            <td>até 15 mil mensal</td>
-            <td>6%</td>
-          </tr>
-          <tr>
-            <td>até 30 mil mensal</td>
-            <td>11,2%</td>
-          </tr>
-          <tr>
-            <td>até 60 mil mensal</td>
-            <td>14%</td>
-          </tr>
-          <tr>
-            <td>até 150 mil mensal</td>
-            <td>16,0%</td>
-          </tr>
-          <tr>
-            <td>até 300 mil mensal</td>
-            <td>21,0%</td>
-          </tr>     
-        </tbody>
-      </table>
-    </div>
-
+    <button class="button-taxas">Veja as taxas</button>
   </div>
-  <div class="carrossel tableSection">
-    <div class="titulo">
-      <h1>Parabéns</h1>
-      <h2>Você está a um passo de aumentar o seu salário liquido em 30%</h2>
-    </div>
-    <table class="tableCupon">
-      <tr>
-        <td class="liquidoClt"></td>
-        <td class="liquidoPj"></td>
-        <td class="liquidoPj"></td>
-      </tr>
+  <div class="promocao">
+    <h2>Parabéns!</h2>
+    <p>Você está a um passo de aumentar o seu salário liquido em 30%</p>
+    <table class="responsive-table striped">
+      <tbody>
+        <tr>
+          <td>Alvin</td>
+          <td>Eclair</td>
+          <td>$0.87</td>
+        </tr>
+      </tbody>
     </table>
+    <div class="cupom">
+      <span>
+        <p>E para comemorar você ganha o mesmo valor em desconto na abertura do seu <strong>PJ!</strong> use o cupom</p>
+        <p><strong>ClTP xx</strong></p>
+    </span>
+      <button>Usar Cupom</button>
+    </div>
   </div>
+
+ 
 </section>
 
 <script src="script.js"></script>
