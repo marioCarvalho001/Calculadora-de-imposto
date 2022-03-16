@@ -239,6 +239,29 @@ button:hover{
   }
 }
 @media(max-width: 412px){
+  .section{
+    height: 100%;
+  }
+  .promocao h2{
+    font-size: 4em;
+  }
+  .promocao p{
+    font-size: 1.5em;
+  }
+  .cupom p{
+    font-size: 1em;
+  }
+  .tabela-resultado{
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+  }
+
+  .promocao{
+    width: 70vw;
+    height: 100vh;
+    align-items: center;
+  }
   .subTables{
     flex-direction: column;
   }
